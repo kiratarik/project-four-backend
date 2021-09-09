@@ -10,4 +10,4 @@ class GameListView(ListCreateAPIView):
     '''List View for /games INDEX CREATE'''
     queryset = Game.objects.all()
     serializer_class = GameSerializer
-    permission_classes = ( IsAuthenticatedOrReadOnly, )
+    # permission_classes = ( IsAuthenticatedOrReadOnly, )
