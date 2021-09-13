@@ -8,5 +8,15 @@
     "description": "First to 3 symbols in a row, column, or diagonal wins.",
     "rules": "Player 1 plays O's, player 2 plays X's. Each player takes turns placing on a 3 by 3 grid. First to making a line of three of the same symbol wins."
   }
+},
+{
+  "model": "games.game",
+  "pk": 2,
+  "fields": {
+    "name": "Tic-Tac-Toe-2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/1920px-Tic_tac_toe.svg.png",
+    "description": "First to 3 symbols in a row, column, or diagonal wins.",
+    "rules": "Player 1 plays O's, player 2 plays X's. Each player takes turns placing on a 3 by 3 grid. First to making a line of three of the same symbol wins."
+  }
 }
 ]
