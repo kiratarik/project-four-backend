@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'games',
+    'jwt_auth',
 ]
 
 MIDDLEWARE = [
@@ -135,5 +136,11 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_PARSER_CLASSES': (
         'djangorestframework_camel_case.parser.CamelCaseJSONParser',
-    )
+    ),
+
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'jwt_auth.authentication.JWTAuthentication'
+    ]
 }
+
+AUTH_USER_MODEL = 'jwt_auth.User'
