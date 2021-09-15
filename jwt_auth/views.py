@@ -4,13 +4,14 @@ from rest_framework import serializers
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.exceptions import PermissionDenied
+from rest_framework.generics import ListCreateAPIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework import status
 from django.contrib.auth import get_user_model
 from django.conf import settings
 import jwt
 
-from .serializers import UserProfileSerializer, UserRegisterSerializer
+from .serializers import UserProfileSerializer, UserRegisterSerializer, UsersShowSerializer
 
 User = get_user_model()
 
@@ -27,6 +28,8 @@ class RegisterView(APIView):
                 status=status.HTTP_201_CREATED
             )
         return Response(user_to_create.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
+
 
 class LoginView(APIView):
 
@@ -63,3 +66,10 @@ class ProfileView(APIView):
     def get(self, request):
         serializer_user = UserProfileSerializer(request.user)
         return Response(serializer_user.data, status=status.HTTP_200_OK)
+
+
+
+class UsersView(ListCreateAPIView):
+    '''List View for /users INDEX CREATE'''
+    queryset = User.objects.all()
+    serializer_class = UsersShowSerializer
