@@ -1,0 +1,135 @@
+[
+{
+  "model": "jwt_auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$z6b1Q8iABlnLYAum7RkAUW$4YPLrwic4wqfUEleJ7NFBv4dd/bsSRvjmI5hpBj07Xw=",
+    "last_login": "2021-09-15T14:47:13.139Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-09-15T14:28:00.928Z",
+    "email": "admin@email.com",
+    "profile_image": "https://pbs.twimg.com/profile_images/378800000798128501/dd3ed3516fec0054b8d9357890c97337_400x400.jpeg",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pass",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Tarik",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-09-15T14:47:27Z",
+    "email": "tarik@email.com",
+    "profile_image": "https://st2.depositphotos.com/1104517/11965/v/600/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$cP2O5Yicxh4slg2gOoKqrO$7NUk9f0S/xbMuDSLayMd+xBBIOJk1lU2dDy7IFHFfn8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Jack",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-09-15T15:01:18.299Z",
+    "email": "jack@email.com",
+    "profile_image": "https://st2.depositphotos.com/1104517/11965/v/600/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$UG0sHgTLWxeqWW2qosIDn5$iYgEsD18T7tG2dYspE1hnR6rNXvvcC4gVWkqigMFWlY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Ann",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-09-15T16:47:16.864Z",
+    "email": "annie@email.com",
+    "profile_image": "https://st2.depositphotos.com/1104517/11965/v/600/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$QvmaFy0wnXDqvkzOfSNaK7$66U7K2j5Gz7TalV8SVJud+5Z57hGwz4w6TggEJLZyDk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Cheeseburger",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-09-15T16:47:36.203Z",
+    "email": "donteatme@email.com",
+    "profile_image": "https://www.foodrepublic.com/wp-content/uploads/2012/03/033_FR11785.jpg",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$o3bCvMR9xLB23r3qECytB3$FyhmAjDAoKgpEBJarZm03ExvmSV1yBpHPKdJZplyQMk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Surfer Dude",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-09-15T17:19:13.303Z",
+    "email": "totallyrighteous@email.com",
+    "profile_image": "https://media.istockphoto.com/vectors/cartoon-surfer-dude-character-illustration-vector-id1276360974",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$y3mNrl5Kl2oEFllj4bvGem$xSJ/9HlJuoPChHp6CieXGMzGW3WItb8u8ruznrc7jEw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Stacy's Mom",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-09-15T17:23:34.659Z",
+    "email": "hasgotitgoingon@email.com",
+    "profile_image": "https://resizing.flixster.com/xK0z-fm5vn2nfBS-Kmpa2NpGj-A=/206x305/v2/https://flxt.tmsimg.com/assets/p8164947_p_v8_aa.jpg",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

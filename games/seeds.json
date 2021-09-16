@@ -13,10 +13,30 @@
   "model": "games.game",
   "pk": 2,
   "fields": {
-    "name": "Tic-Tac-Toe-2",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/1920px-Tic_tac_toe.svg.png",
-    "description": "First to 3 symbols in a row, column, or diagonal wins.",
-    "rules": "Player 1 plays O's, player 2 plays X's. Each player takes turns placing on a 3 by 3 grid. First to making a line of three of the same symbol wins."
+    "name": "Checkers",
+    "image": "https://styles.redditmedia.com/t5_2shcp/styles/communityIcon_paxh2f8erwg61.jpg",
+    "description": "Defeat your opponent by jumping their pieces with your pieces.",
+    "rules": "Players can move only diagonally one space except when taking where they can 'jump' opponent pieces any number of times in a row with one piece. The pieces can only move forward unless they have reached the opponents end where they can be 'queened' and then move back and forth. If on your turn you are able to take a piece, then you must take a piece. Winner is whoever doesn't lose all their pieces."
+  }
+},
+{
+  "model": "games.game",
+  "pk": 3,
+  "fields": {
+    "name": "Connnect-Four",
+    "image": "https://upload.wikimedia.org/wikipedia/en/7/79/Connect_4_Board_and_Box.jpg",
+    "description": "Defeat your opponent by making a line of four of your pieces.",
+    "rules": "Players take turns dropping pieces from above where they stack on each other. First to create a diagonal, horizontal, or vertical line of their pieces, 4 pieces long wins."
+  }
+},
+{
+  "model": "games.game",
+  "pk": 4,
+  "fields": {
+    "name": "Guess-Who",
+    "image": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2012/11/16/20/guesswho.jpg?width=1200&auto=webp&quality=75",
+    "description": "Try to guess who your opponent is.",
+    "rules": "Players take turns asking each other yes/no questions about the face card they have until one of them guesses the correct person."
   }
 }
 ]
