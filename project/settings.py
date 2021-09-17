@@ -10,7 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
+from dotenv import load_dotenv
+import dj_database_url
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,10 +24,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-)ktve3hh#oje181dc-q7&^0-gj!rxwxc%1cq3(3ykm3f5pr48!'
+# SECRET_KEY = 'django-insecure-)ktve3hh#oje181dc-q7&^0-gj!rxwxc%1cq3(3ykm3f5pr48!'
+if str(os.getenv('ENVIRONMENT')) == 'development':
+    SECRET_KEY = 'django-insecure-)ktve3hh#oje181dc-q7&^0-gj!rxwxc%1cq3(3ykm3f5pr48!' # should be whatever your original key was
+else:
+    SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True if str(os.getenv('ENVIRONMENT')) == 'development' else False
 
 ALLOWED_HOSTS = []
 
@@ -56,8 +64,11 @@ ROOT_URLCONF = 'project.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'BACKEND': 
+'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'client')
+                ]  #Look, we have added the root folder of frontend here
+        ,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,14 +87,16 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
+DATABASES = {}
+if str(os.getenv('ENVIRONMENT')) == 'development':
+    DATABASES['default'] =  {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'games',
+        'NAME': 'games', # < --- make sure you chage this
         'HOST': 'localhost',
         'PORT': 5432
     }
-}
+else:
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 
 # Password validation
@@ -144,3 +157,12 @@ REST_FRAMEWORK = {
 }
 
 AUTH_USER_MODEL = 'jwt_auth.User'
+
+
+ROOT_URLCONF = 'project.urls' #check if you have this already, if not add it in
+
+STATIC_URL = '/static/' # same with this
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'client', "build", "static"), 
+)
